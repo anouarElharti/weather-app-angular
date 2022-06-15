@@ -1,0 +1,130 @@
+<div class="container" *ngIf="weatherData">
+  <div class="upper">
+    <img
+      src="https://i.pinimg.com/736x/96/2d/29/962d294f8915f6705d87f3b978036022.jpg"
+      alt=""
+      *ngIf="weatherData.main.temp > 15"
+    />
+    <img
+      src="https://cdn.pixabay.com/photo/2021/09/01/08/23/winter-6590863_960_720.png"
+      alt=""
+      *ngIf="weatherData.main.temp <= 15"
+    />
+    <div class="weather-data">
+      <div class="location">{{ weatherData.name }}</div>
+      <div class="temperature">
+        {{ weatherData.main.temp | number: "1.0-0" }}°C
+      </div>
+    </div>
+  </div>
+  <div class="lower">
+    <div class="moreInfo">More informations</div>
+    <div class="moreInfoContainer">
+      <div class="infoBloc">
+        <div class="infoBlocLabel">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/661/661346.png"
+            alt=""
+          />
+          <span>min</span>
+        </div>
+        <div class="infoBlocValue">{{ weatherData.main.temp_min }}°C</div>
+      </div>
+      <div class="infoBloc">
+        <div class="infoBlocLabel">
+          <img
+            src="https://icon-library.com/images/thermometer-icon-png/thermometer-icon-png-13.jpg"
+            alt=""
+          />
+          <span>max</span>
+        </div>
+        <div class="infoBlocValue">{{ weatherData.main.temp_max }}°C</div>
+      </div>
+      <div class="infoBloc">
+        <div class="infoBlocLabel">
+          <img
+            src="https://icon-library.com/images/humidity-icon/humidity-icon-7.jpg"
+            alt=""
+          />
+          <span>Humidity</span>
+        </div>
+        <div class="infoBlocValue">{{ weatherData.main.humidity }}%</div>
+      </div>
+      <div class="infoBloc">
+        <div class="infoBlocLabel">
+          <img
+            src="https://icon-library.com/images/wind-icon-png/wind-icon-png-8.jpg"
+            alt=""
+          />
+          <span>Wind</span>
+        </div>
+        <div class="infoBlocValue">{{ weatherData.wind.speed }}km/h</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="upper">
+    <img
+      src="https://i.pinimg.com/736x/96/2d/29/962d294f8915f6705d87f3b978036022.jpg"
+      alt=""
+      *ngIf="14 > 15"
+    />
+    <img
+      src="https://cdn.pixabay.com/photo/2021/09/01/08/23/winter-6590863_960_720.png"
+      alt=""
+      *ngIf="14 <= 15"
+    />
+    <div class="weather-data">
+      <div class="location">Rabat</div>
+      <div class="temperature">{{ 14 | number: "1.0-0" }}°C</div>
+    </div>
+  </div>
+  <div class="lower">
+    <div class="moreInfo">More informations</div>
+    <div class="moreInfoContainer">
+      <div class="infoBloc">
+        <div class="infoBlocLabel">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/661/661346.png"
+            alt=""
+          />
+          <span>min</span>
+        </div>
+        <div class="infoBlocValue">10°C</div>
+      </div>
+      <div class="infoBloc">
+        <div class="infoBlocLabel">
+          <img
+            src="https://icon-library.com/images/thermometer-icon-png/thermometer-icon-png-13.jpg"
+            alt=""
+          />
+          <span>max</span>
+        </div>
+        <div class="infoBlocValue">10°C</div>
+      </div>
+      <div class="infoBloc">
+        <div class="infoBlocLabel">
+          <img
+            src="https://icon-library.com/images/humidity-icon/humidity-icon-7.jpg"
+            alt=""
+          />
+          <span>Humidity</span>
+        </div>
+        <div class="infoBlocValue">10°C</div>
+      </div>
+      <div class="infoBloc">
+        <div class="infoBlocLabel">
+          <img
+            src="https://icon-library.com/images/wind-icon-png/wind-icon-png-8.jpg"
+            alt=""
+          />
+          <span>Wind</span>
+        </div>
+        <div class="infoBlocValue">10°C</div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<router-outlet></router-outlet>

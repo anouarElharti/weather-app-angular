@@ -1,5 +1,12 @@
 # WeatherApp
 
+imgHot:https://i.pinimg.com/736x/96/2d/29/962d294f8915f6705d87f3b978036022.jpg
+imgCold:https://cdn.pixabay.com/photo/2021/09/01/08/23/winter-6590863_960_720.png
+humidity:https://icon-library.com/images/humidity-icon/humidity-icon-7.jpg
+wind:https://icon-library.com/images/wind-icon-png/wind-icon-png-8.jpg
+hot:https://icon-library.com/images/thermometer-icon-png/thermometer-icon-png-13.jpg
+cold:https://cdn-icons-png.flaticon.com/512/661/661346.png
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
 
 ## Development server
