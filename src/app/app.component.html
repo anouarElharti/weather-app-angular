@@ -1,3 +1,13 @@
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input
+      type="text"
+      placeholder="Search city"
+      name="cityName"
+      [(ngModel)]="cityName"
+    />
+  </form>
+</div>
 <div class="container" *ngIf="weatherData">
   <div class="upper">
     <img
